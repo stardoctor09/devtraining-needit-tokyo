@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_template">
+    <sys_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>Admin Template</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description>Admin Short Decription</short_description>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sys_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-11 20:46:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ec5b6130977221104941bdc0f053afb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Admin Template</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_template_ec5b6130977221104941bdc0f053afb4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-11 20:46:18</sys_updated_on>
+        <table>incident</table>
+        <template>caller_id=6816f79cc0a8016401c5a33be04be441^closed_at=2023-05-11 13:36:55^opened_at=2019-07-22 14:04:57^short_description=Must be entered^state=3^urgency=2^assigned_to=6816f79cc0a8016401c5a33be04be441^EQ</template>
+        <user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user>
+        <view/>
+    </sys_template>
+</record_update>
