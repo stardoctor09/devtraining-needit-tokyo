@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Only display what needed chaoices based on Request Type</description>
+        <field>u_request_type</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Needit Request Type Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   alert ("OldValue:" + oldValue + ", newValue:" + newValue);
+   if (newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+    
+    var whatneeded = g_form.getValue('u_what_needed');
+	alert ("Needed options: " +  g_form.getValue('u_what_needed'));
+    
+    // Clear all of the choices from the What needed field choice list
+    g_form.clearOptions('u_what_needed');
+    
+    // If the value of the Request type field is hr, add
+    // two hr choices and other to the What needed field choice list
+    if(newValue == 'hr'){
+      g_form.addOption('u_what_needed','hr1','Human Resources 1');
+      g_form.addOption('u_what_needed','hr2','Human Resources 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    // If the value of the Request type field is facilities, add
+    // two facilities choices and other to the What needed field
+    // choice list
+    if(newValue == 'facilities'){
+      g_form.addOption('u_what_needed','facilities1','Facilities 1');
+      g_form.addOption('u_what_needed','facilities2','Facilities 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    // If the value of the Request type field is legal, add
+    // two legal choices and other to the What needed field
+    // choice list
+    if(newValue == 'legal'){
+      g_form.addOption('u_what_needed','legal1','Legal 1');
+      g_form.addOption('u_what_needed','legal2','Legal 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    
+    // If the form is loading and it is not a new record, set the u_what_needed value to the
+    // value from the record before it was loaded
+    if(isLoading && !g_form.isNewRecord()){
+      g_form.setValue('u_what_needed', whatneeded);
+    }
+  }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-04 19:30:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>74c5dd62972221104941bdc0f053af97</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Needit Request Type Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_74c5dd62972221104941bdc0f053af97</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-04 19:55:27</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>532e7beddbceb7c43050ac44d49619d1</instance_id>
+        <instance_name>dev87445</instance_name>
+        <name>sys_script_client_74c5dd62972221104941bdc0f053af97</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Only display what needed chaoices based on Request Type&lt;/description&gt;&lt;field&gt;u_request_type&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Needit Request Type Options&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   alert ("OldValue:" + oldValue + ", newValue:" + newValue);
+   if (newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+    
+    var whatneeded = g_form.getValue('u_what_needed');
+	alert ("Needed options: " +  g_form.getValue('u_what_needed'));
+    
+    // Clear all of the choices from the What needed field choice list
+    g_form.clearOptions('u_what_needed');
+    
+    // If the value of the Request type field is hr, add
+    // two hr choices and other to the What needed field choice list
+    if(newValue == 'hr'){
+      g_form.addOption('u_what_needed','hr1','Human Resources 1');
+      g_form.addOption('u_what_needed','hr2','Human Resources 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    // If the value of the Request type field is facilities, add
+    // two facilities choices and other to the What needed field
+    // choice list
+    if(newValue == 'facilities'){
+      g_form.addOption('u_what_needed','facilities1','Facilities 1');
+      g_form.addOption('u_what_needed','facilities2','Facilities 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    // If the value of the Request type field is legal, add
+    // two legal choices and other to the What needed field
+    // choice list
+    if(newValue == 'legal'){
+      g_form.addOption('u_what_needed','legal1','Legal 1');
+      g_form.addOption('u_what_needed','legal2','Legal 2');
+      g_form.addOption('u_what_needed','other','Other');
+    }
+    
+    // If the form is loading and it is not a new record, set the u_what_needed value to the
+    // value from the record before it was loaded
+    if(isLoading &amp;&amp; !g_form.isNewRecord()){
+      g_form.setValue('u_what_needed', whatneeded);
+    }
+  }
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-04 19:30:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;74c5dd62972221104941bdc0f053af97&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Needit Request Type Options&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_74c5dd62972221104941bdc0f053af97&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-04 19:55:27&lt;/sys_updated_on&gt;&lt;table&gt;x_58872_needit_needit&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1296739291</payload_hash>
+        <record_name>Needit Request Type Options</record_name>
+        <reverted_from/>
+        <source>670fd048972661104941bdc0f053afee</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-04 19:55:27</sys_created_on>
+        <sys_id>3c7d992a972221104941bdc0f053af1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187e85573db0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-04 19:55:27</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>347d992a6d222110d2a8496bf5048f1d</update_guid>
+        <update_guid_history>347d992a6d222110d2a8496bf5048f1d:1296739291,ddac99669a222110612453da362313d7:706763994,6f7a95a683222110ae8ec2302e3174d5:-722128650,24599d26c6222110f43e36107ffbf71f:2032057471,b5a81d26c422211091586f6d07324f61:88059694,8db7d9e2df22211006c5925ee41d03b6:14291661</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-05-04 19:58:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>3017d288d18844e0996059ca317ecee4</sys_id>
+        <sys_metadata>74c5dd62972221104941bdc0f053af97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Needit Request Type Options</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt">2a278260972221104941bdc0f053af8c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_client_74c5dd62972221104941bdc0f053af97</sys_update_name>
+        <sys_update_version display_value="sys_script_client_74c5dd62972221104941bdc0f053af97">3c7d992a972221104941bdc0f053af1d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-05-04 19:58:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
